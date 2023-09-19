@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--estilo css  -->
+    <%- include("./partials/head.ejs") %>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include("./partials/navitagion.ejs") %>
+
+    <!-- main content -->
+    <div class="container">
+      <header
+        class="text-center aling-items-center justify-content-center mt-5"
+      >
+        <img
+          src="/image/nodejs.png"
+          alt="logo de nodeJS"
+          class="w-25 img-zoomable"
+        />
+      </header>
+      <h1
+        class="text-center mt-5 align-items-center justify-content-center fw-bold text-white"
+        style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)"
+      >
+        NodeJS Project Basic
+      </h1>
+
+      <%- include("./partials/carousel.ejs") %>
+
+      <div class="row mt-5 mb-5 align-items-center justify-content-center mx-2 container" >
+        <div class="col-sm-4 mb-3">
+          <div
+            class="card bg-dark text-white"
+           
+          >
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">
+                Construcción de esta página
+              </h5>
+              <p class="card-text text-secondary mt-3 mb-4">
+                Te invitamos a explorar la documentación completa del proceso de
+                creación de esta página, paso a paso, incluyendo la
+                implementación de las innovadoras tecnologías que la hicieron
+                posible. ¡Descúbrela ahora!
+              </p>
+              <a
+                href="https://www.notion.so/NodeJS-Proyecto-B-sico-441d7774822848e9bfe618086ec31843?pvs=4"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-secondary img-zoomable"
+                >Ir a Notion</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div
+            class="card bg-dark text-white"
+            
+          >
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">
+                Explora nuestro código en GitHub
+              </h5>
+              <p class="card-text text-secondary mt-3">
+                Dentro de nuestro repositorio en GitHub, encontrarás el corazón
+                de nuestra página web. Aquí puedes acceder al código fuente,
+                adentrarte en nuestro proceso de desarrollo y explorar las
+                tecnologías innovadoras que impulsan nuestro sitio.
+              </p>
+              <a
+                href="https://github.com/Alemar16/NodeJS/tree/main/1-Servidor/1.4-NodeJS-Project_Basic"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-secondary mb-3 img-zoomable"
+                >Ir a GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

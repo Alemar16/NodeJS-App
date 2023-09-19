@@ -1,0 +1,47 @@
+body {
+  overflow-x: hidden;
+  background-color: #202020;
+  padding-top: 60px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos para la barra de navegación fija */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Estilos personalizados para la barra de desplazamiento lateral */
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #202020;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+/* Estilo para la imagen con efecto de zoom */
+.img-zoomable {
+  transition: transform 0.1s;
+}
+
+.img-zoomable:hover {
+  transform: scale(1.05);
+}

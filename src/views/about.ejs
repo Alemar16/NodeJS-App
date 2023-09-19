@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--estilo css  -->
+    <%- include("./partials/head.ejs") %>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include("./partials/navitagion.ejs") %>
+
+    <!-- Contenido de la página -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="display-4 text-white">Node.js y Desarrollo Web Moderno</h1>
+          <p class="lead text-white mt-5">
+            Descubre cómo Node.js, Express, Morgan, EJS y Nodemon pueden
+            impulsar tus proyectos web. Crea aplicaciones web elegantes y
+            eficientes.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="/image/about-nodejs.jpg"
+            alt="Node.js"
+            class="img-fluid mb-3 rounded shadow"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de características -->
+
+    <div
+      class="row row-cols-1 row-cols-md-3 mt-4 mb-4 g-4 justify-content-center align-items-stretch mx-2"
+    >
+      <!-- Express -->
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <div class="card bg-dark d-flex flex-column h-100">
+          <img
+            src="/image/express.jpg"
+            class="card-img-top w-75 mx-auto shadow rounded mt-1 img-zoomable "
+            alt="Hollywood Sign on The Hill"
+          />
+          <div class="card-body text-secondary">
+            <h5 class="card-title text-light">Express</h5>
+            <p class="card-text">
+              Infraestructura web rápida, minimalista y flexible para Node.js
+            </p>
+            <button
+              type="button"
+              class="btn btn-dark btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#expressModal"
+            >
+              Leer más
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Morgan -->
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <div class="card bg-dark d-flex flex-column h-100">
+          <img
+            src="/image/morgan.png"
+            class="card-img-top w-75 mx-auto shadow rounded mt-1 img-zoomable"
+            alt="Hollywood Sign on The Hill"
+          />
+          <div class="card-body text-secondary">
+            <h5 class="card-title text-light">Morgan</h5>
+            <p class="card-text">Control Total sobre las Solicitudes HTTP.</p>
+            <button
+              type="button"
+              class="btn btn-dark btn-sm mt-3"
+              data-bs-toggle="modal"
+              data-bs-target="#morganModal"
+            >
+              Leer más
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Ejs -->
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <div class="card bg-dark d-flex flex-column h-100">
+          <img
+            src="/image/Ejs.png"
+            class="card-img-top w-75 mx-auto shadow rounded mt-1 img-zoomable"
+            alt="Hollywood Sign on The Hill"
+          />
+          <div class="card-body text-secondary">
+            <h5 class="card-title text-light">Ejs</h5>
+            <p class="card-text">Creación Dinámica de Contenido.</p>
+            <button
+              type="button"
+              class="btn btn-dark btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#ejsModal"
+            >
+              Leer más
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Nodemon -->
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <div class="card bg-dark d-flex flex-column h-100">
+          <img
+            src="/image/nodemon.png"
+            class="card-img-top w-75 mx-auto shadow rounded mt-1 img-zoomable"
+            alt="Hollywood Sign on The Hill"
+          />
+          <div class="card-body text-secondary">
+            <h5 class="card-title text-light">Nodemon</h5>
+            <p class="card-text">
+              Nodemon supervisa tus cambios de código,¡Sin reinicios manuales!
+            </p>
+            <button
+              type="button"
+              class="btn btn-dark btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#nodemonModal"
+            >
+              Leer más
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ModalExpress -->
+    <div
+      class="modal fade"
+      id="expressModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="expressModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+        role="document"
+      >
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-light" id="expressModalLabel">
+              Express
+            </h5>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+          </div>
+          <div class="modal-body">
+            <p>
+              Cuando se trata de crear aplicaciones web, Express.js es el
+              compañero perfecto de Node.js. Este framework minimalista pero
+              poderoso simplifica la creación de servidores web y API,
+              proporcionando una base sólida para construir aplicaciones
+              robustas. Con Express, las rutas y los controladores se definen de
+              manera intuitiva, lo que facilita la gestión de solicitudes
+              entrantes y la entrega de respuestas impresionantes.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://expressjs.com/es/guide/routing.html', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Express Docs
+            </a>
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://github.com/expressjs/express/tree/master/examples', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              GitHub Examples
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ModalMorgan -->
+    <div
+      class="modal fade"
+      id="morganModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="expressModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+        role="document"
+      >
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-light" id="expressModalLabel">
+              Morgan
+            </h5>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+          </div>
+          <div class="modal-body">
+            <p>
+              Morgan, la biblioteca de registro de solicitudes HTTP, eleva tus
+              aplicaciones a otro nivel. Con una facilidad asombrosa, puedes
+              rastrear cada solicitud entrante, cada respuesta y cada error en
+              tu servidor. Obtén una visión completa de lo que sucede detrás de
+              escena y depura tu código con confianza.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://expressjs.com/en/resources/middleware/morgan.html', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Morgan Docs
+            </a>
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://dev.to/devland/how-to-use-morgan-in-your-nodejs-project-21im', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              How to use morgan
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ModalEjs -->
+    <div
+      class="modal fade"
+      id="ejsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="expressModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+        role="document"
+      >
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-light" id="expressModalLabel">Ejs</h5>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+          </div>
+          <div class="modal-body">
+            <p>
+              Para la generación de HTML dinámico, EJS (Embedded JavaScript) es
+              el arma secreta. Incrusta código JavaScript en tus archivos HTML y
+              crea vistas dinámicas sin problemas. Desde la presentación de
+              datos hasta la generación de contenido personalizado, EJS es tu
+              aliado creativo.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://ejs.co/#promo', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Ejs website
+            </a>
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://github.com/mde/ejs/blob/main/docs/syntax.md', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              GitHub Ejs Syntax
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ModalNodemon -->
+    <div
+      class="modal fade"
+      id="nodemonModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="expressModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+        role="document"
+      >
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-light" id="expressModalLabel">
+              Nodemon
+            </h5>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+          </div>
+          <div class="modal-body">
+            <p>
+              Nodemon, el observador de cambios, te libera de las tareas
+              tediosas. Detecta automáticamente cualquier modificación en tu
+              código y reinicia el servidor en un abrir y cerrar de ojos.
+              Olvídate de los reinicios manuales y concéntrate en lo que
+              realmente importa: el desarrollo.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://nodemon.io/', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Nodemon Webside
+            </a>
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://www.npmjs.com/package/nodemon', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Nodemon Docs
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ModalBootstrap -->
+    <div
+      class="modal fade"
+      id="bootstrapModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="expressModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+        role="document"
+      >
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-light" id="expressModalLabel">
+              Bootstrap 5.3
+            </h5>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+          </div>
+          <div class="modal-body">
+            <p>
+              No podemos pasar por alto el toque final: Bootstrap. Este
+              framework CSS líder en la industria facilita la creación de
+              interfaces de usuario atractivas y receptivas. Desde componentes
+              de diseño hasta cuadrículas flexibles, Bootstrap pone las
+              herramientas de diseño en tus manos.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://getbootstrap.com/docs/5.3/getting-started/introduction/', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Bootstrap Docs
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Bootstrap -->
+    <div class="container mt-5">
+      <div>
+        <h2 class="display-4 text-white title mt-4 mb-5">Funcionalidad y Elegancia</h2>
+      <p class="lead text-white mb-5">
+        Así es como Node.js y su ecosistema de tecnologías hacen que la creación de aplicaciones web sea una obra de arte, fusionando la elegancia técnica con la estética visual para construir el futuro de la web. ¡Bienvenido a la era de la programación web sofisticada y poderosa!
+      </p></div>
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Imagen referencial a Bootstrap (reemplaza la ruta) -->
+      <img
+        src="/image/bootstrap.png"
+        alt="Bootstrap"
+        class="img-fluid rounded shadow mb-5"
+      />
+    </div>
+    <div class="col-md-6">
+      
+      <h2 class="display-4 text-white">Bootstrap: Estilo y Elegancia</h2>
+      <p class="lead text-white">
+        Utiliza Bootstrap para dar vida a tus diseños y crear interfaces de usuario atractivas y responsivas.
+      </p>
+      <button
+        type="button"
+        class="btn btn-dark btn-sm"
+        data-bs-toggle="modal"
+        data-bs-target="#bootstrapModal"
+      >
+        Leer más
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Seccion de Font Awesome -->
+  <div class="container mt-5">
+  <div class="row">
+   
+    <div class="col-md-6">
+      
+      <h2 class="display-4 text-white mb-4 mt-4">Font Awesome: Icons</h2>
+      <p class="lead text-white">
+        Font Awesome ofrece una amplia colección de iconos vectoriales de alta calidad que son escalables y se ven nítidos en cualquier tamaño o resolución.
+      </p>
+      <button
+        type="button"
+        class="btn btn-dark btn-sm"
+        data-bs-toggle="modal"
+        data-bs-target="#FontAwesomeModal"
+      >
+        Leer más
+      </button>
+    </div>
+     <div class="col-md-6">
+      <!-- Imagen referencial a Bootstrap (reemplaza la ruta) -->
+      <img
+        src="/image/fontawesome.png"
+        alt="Bootstrap"
+        class="img-fluid rounded shadow mb-5 mt-5"
+      />
+    </div>
+  </div>
+</div>
+    <!-- ModalExpress -->
+    <div
+      class="modal fade"
+      id="expressModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="expressModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+        role="document"
+      >
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-light" id="expressModalLabel">
+              Express
+            </h5>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+          </div>
+          <div class="modal-body">
+            <p>
+              Cuando se trata de crear aplicaciones web, Express.js es el
+              compañero perfecto de Node.js. Este framework minimalista pero
+              poderoso simplifica la creación de servidores web y API,
+              proporcionando una base sólida para construir aplicaciones
+              robustas. Con Express, las rutas y los controladores se definen de
+              manera intuitiva, lo que facilita la gestión de solicitudes
+              entrantes y la entrega de respuestas impresionantes.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://expressjs.com/es/guide/routing.html', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Express Docs
+            </a>
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://github.com/expressjs/express/tree/master/examples', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              GitHub Examples
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ModalMorgan -->
+    <div
+      class="modal fade"
+      id="morganModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="expressModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+        role="document"
+      >
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-light" id="expressModalLabel">
+              Morgan
+            </h5>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+          </div>
+          <div class="modal-body">
+            <p>
+              Morgan, la biblioteca de registro de solicitudes HTTP, eleva tus
+              aplicaciones a otro nivel. Con una facilidad asombrosa, puedes
+              rastrear cada solicitud entrante, cada respuesta y cada error en
+              tu servidor. Obtén una visión completa de lo que sucede detrás de
+              escena y depura tu código con confianza.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://expressjs.com/en/resources/middleware/morgan.html', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Morgan Docs
+            </a>
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://dev.to/devland/how-to-use-morgan-in-your-nodejs-project-21im', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              How to use morgan
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ModalEjs -->
+    <div
+      class="modal fade"
+      id="ejsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="expressModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+        role="document"
+      >
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-light" id="expressModalLabel">Ejs</h5>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+          </div>
+          <div class="modal-body">
+            <p>
+              Para la generación de HTML dinámico, EJS (Embedded JavaScript) es
+              el arma secreta. Incrusta código JavaScript en tus archivos HTML y
+              crea vistas dinámicas sin problemas. Desde la presentación de
+              datos hasta la generación de contenido personalizado, EJS es tu
+              aliado creativo.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://ejs.co/#promo', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Ejs website
+            </a>
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://github.com/mde/ejs/blob/main/docs/syntax.md', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              GitHub Ejs Syntax
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ModalNodemon -->
+    <div
+      class="modal fade"
+      id="nodemonModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="expressModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+        role="document"
+      >
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-light" id="expressModalLabel">
+              Nodemon
+            </h5>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+          </div>
+          <div class="modal-body">
+            <p>
+              Nodemon, el observador de cambios, te libera de las tareas
+              tediosas. Detecta automáticamente cualquier modificación en tu
+              código y reinicia el servidor en un abrir y cerrar de ojos.
+              Olvídate de los reinicios manuales y concéntrate en lo que
+              realmente importa: el desarrollo.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://nodemon.io/', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Nodemon Webside
+            </a>
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://www.npmjs.com/package/nodemon', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Nodemon Docs
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ModalBootstrap -->
+    <div
+      class="modal fade"
+      id="bootstrapModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="expressModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+        role="document"
+      >
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-light" id="expressModalLabel">
+              Bootstrap 5.3
+            </h5>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+          </div>
+          <div class="modal-body">
+            <p>
+              No podemos pasar por alto el toque final: Bootstrap. Este
+              framework CSS líder en la industria facilita la creación de
+              interfaces de usuario atractivas y receptivas. Desde componentes
+              de diseño hasta cuadrículas flexibles, Bootstrap pone las
+              herramientas de diseño en tus manos.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://getbootstrap.com/docs/5.3/getting-started/introduction/', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Bootstrap Docs
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ModalFontAwesome -->
+    <div
+      class="modal fade"
+      id="FontAwesomeModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="expressModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+        role="document"
+      >
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-light" id="expressModalLabel">
+              Font Awesome
+            </h5>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+          </div>
+          <div class="modal-body">
+            <p>
+            Font Awesome es una herramienta versátil y popular que simplifica la incorporación de iconos en tu proyecto web o de aplicación, mejorando la apariencia y la usabilidad de tus interfaces de usuario. Además, su amplia gama de opciones y su facilidad de uso lo convierten en una elección común para diseñadores y desarrolladores.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <a
+              href="javascript:void(0);"
+              onclick="window.open('https://fontawesome.com/icons', '_blank')"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Font Awesome Website
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
