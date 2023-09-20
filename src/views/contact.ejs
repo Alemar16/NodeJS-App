@@ -1,18 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <!--estilo css  -->
+    <!--estilo css  -->
     <%- include("./partials/head.ejs") %>
     <title><%= title %></title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script> -->
+     
   </head>
   <body>
+    <%- include("./partials/navitagion.ejs") %>
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <!-- Columna para el formulario -->
+        <div class="col-md-4">
+          <h1 class="text-center text-white mb-5">Contact Us</h1>
+          <form action="/contact" method="post">
+            
+            <!-- Name Field -->
+            <div class="mb-3">
+              <label for="name" class="form-label text-secondary">Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
 
-     <%- include("./partials/navitagion.ejs") %>
+            <!-- Email Field -->
+            <div class="mb-3">
+              <label for="email" class="form-label text-secondary"
+                >Email:</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
 
-    <h1>Contact</h1>
+            <!-- Message Field -->
+            <div class="mb-3">
+              <label for="message" class="form-label text-secondary"
+                >Message:</label
+              >
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <!-- <button type="submit" class="btn() btn-dark mb-3" id="submit-button">Submit</button> -->
+            <button type="submit" class="btn btn-dark mb-3">Submit</button>
+          </form>
+        </div>
+
+        <!-- Columna para el carrusel de imágenes -->
+        <div class="col-md-8">
+          <%- include("./partials/carousel-contact.ejs") %>
+        </div>
+      </div>
+    </div>
     <!-- footer -->
-     <%- include("./partials/footer.ejs") %> 
+    <%- include("./partials/footer.ejs") %>
+    <!-- Validations -->
+    <%- include("./partials/validations.ejs") %>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <%- include("./partials/toastifyScript.ejs") %>
   </body>
 </html>
