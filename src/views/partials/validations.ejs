@@ -1,0 +1,25 @@
+<!-- Agrega este código JavaScript al final de tu archivo contact.ejs -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (event) {
+      const name = document.querySelector("#name").value;
+      const email = document.querySelector("#email").value;
+      const message = document.querySelector("#message").value;
+
+      if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+        alert("Por favor, completa todos los campos.");
+        event.preventDefault(); // Evita que se envíe el formulario
+      } else if (!isValidEmail(email)) {
+        alert("Por favor, ingresa una dirección de correo válida.");
+        event.preventDefault(); // Evita que se envíe el formulario
+      }
+    });
+
+    function isValidEmail(email) {
+      // Implementa una validación de formato de correo electrónico
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      return emailPattern.test(email);
+    }
+  });
+</script>
