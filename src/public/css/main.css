@@ -1,6 +1,12 @@
 body {
+  background-image: url(../image/fonfo-home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
   overflow-x: hidden;
-  background-color: #202020;
+  background-color: #20202042;
   padding-top: 60px;
 }
 
