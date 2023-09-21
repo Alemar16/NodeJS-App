@@ -1,0 +1,22 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      // Utiliza las variables de entorno en lugar de valores estáticos
+      const recipient = "<%= recipientEmail %>";
+      const sender = "<%= senderEmail %>";
+      const subject = "Asunto del Correo";
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      // Llama a la función sendEmail con los valores proporcionados
+      await sendEmail(recipient, sender, subject, name, email, message);
+    });
+  });
+</script>
+
+
