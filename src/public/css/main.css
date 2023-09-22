@@ -55,12 +55,3 @@ body::-webkit-scrollbar-thumb:hover {
   width: 50px;
   height: auto;
 }
-
-/* Estilo para la imagen con efecto de zoom */
-.img-zoomable {
-  transition: transform 0.1s;
-}
-
-.img-zoomable:hover {
-  transform: scale(1.05);
-}
