@@ -7,66 +7,123 @@
     <%- include("./partials/head.ejs") %>
     <title><%= title %></title>
     <!-- <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script> -->
-     
   </head>
   <body>
     <%- include("./partials/navitagion.ejs") %>
-    <div class="container mt-5 mb-5">
+    <div class="container mt-5 mb-5 ">
       <div class="row">
         <!-- Columna para el formulario -->
-        <div class="col-md-4">
-          <h1 class="text-center text-white mb-5">Contact Us</h1>
-          <form action="/contact" method="post">
-            
-            <!-- Name Field -->
-            <div class="mb-3">
-              <label for="name" class="form-label text-secondary">Name:</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                name="name"
-                required
-              />
-            </div>
+        <div class="col-md-4 bg-dark text-white p-4 rounded shadow">
+  <h1 class="text-center mb-5">
+    Do you have any ideas or suggestions? <br />
+    I'm all ears.
+  </h1>
+  <form action="/contact" method="post">
+    <!-- Name Field -->
+    <div class="mb-3">
+      <label for="name" class="form-label">Name:</label>
+      <input
+        type="text"
+        class="form-control bg-dark text-white"
+        id="name"
+        name="name"
+        required
+      />
+    </div>
 
-            <!-- Email Field -->
-            <div class="mb-3">
-              <label for="email" class="form-label text-secondary"
-                >Email:</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="email"
-                required
-              />
-            </div>
+    <!-- Email Field -->
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input
+        type="email"
+        class="form-control bg-dark text-white"
+        id="email"
+        name="email"
+        required
+      />
+    </div>
 
-            <!-- Message Field -->
-            <div class="mb-3">
-              <label for="message" class="form-label text-secondary"
-                >Message:</label
-              >
-              <textarea
-                class="form-control"
-                id="message"
-                name="message"
-                rows="4"
-                required
-              ></textarea>
-            </div>
+    <!-- Message Field -->
+    <div class="mb-3">
+      <label for="message" class="form-label">Message:</label>
+      <textarea
+        class="form-control bg-dark text-white"
+        id="message"
+        name="message"
+        rows="4"
+        required
+      ></textarea>
+    </div>
 
-            <!-- Submit Button -->
-            <!-- <button type="submit" class="btn() btn-dark mb-3" id="submit-button">Submit</button> -->
-            <button type="submit" class="btn btn-dark mb-3">Submit</button>
-          </form>
-        </div>
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-dark mb-3">Submit</button>
+  </form>
+</div>
+
+
 
         <!-- Columna para el carrusel de imágenes -->
         <div class="col-md-8">
           <%- include("./partials/carousel-contact.ejs") %>
+
+          <div class="container w-75 mb-5 mt-5">
+            <div class="card bg-dark d-flex flex-column h-100">
+              <img
+                src="/image/sengrid.png"
+                class="card-img-top w-50 mx-auto shadow rounded mt-1 img-zoomable"
+                alt="Hollywood Sign on The Hill"
+              />
+              <div class="card-body text-secondary">
+                <p class="card-text text-light font-size-2 text-center">
+                  This form operates thanks to this email delivery service, <Br/> which is widely used in the programming industry.
+                </p>
+
+                <button
+                  type="button"
+                  class="btn btn-dark btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#expressModal"
+                >
+                  Read more
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="expressModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="expressModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+              role="document"
+            >
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-light" id="expressModalLabel">
+                    "This is how I see <br />
+                    your opinions and suggestions. . . !"
+                  </h5>
+                  <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    "A way to receive email messages with your suggestions or
+                    questions, fully customizable with HTML."
+                  </p>
+                  <img
+                    src="/image/correo.jpeg"
+                    class="img-fluid rounded shadow mb-1 mt-1"
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="modal-footer border-0"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -74,8 +131,12 @@
     <%- include("./partials/footer.ejs") %>
     <!-- Validations -->
     <%- include("./partials/validations.ejs") %>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <%- include("./partials/toastifyScript.ejs") %>
-    <%- include("./partials/contactForm.ejs") %>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <%- include("./partials/toastifyScript.ejs") %> <%-
+    include("./partials/contactForm.ejs") %>
   </body>
 </html>
