@@ -24,10 +24,16 @@ app.use("/contact", contactRouter);
 
 // Define otras rutas aquí utilizando routers similares
 
-app.get("/", (req, res) => res.render("index", { title: "Home" }));
-app.get("/about", (req, res) => res.render("about", { title: "About" }));
+app.get("/", (req, res) => res.render("index", { title: "NodeJS Project" }));
+app.get("/about", (req, res) =>
+  res.render("about", { title: "NodeJS Project" })
+);
 app.get("/contact", (req, res) =>
-  res.render("contact", { title: "Contact", recipientEmail, senderEmail })
+  res.render("contact", {
+    title: "NodeJS Project",
+    recipientEmail,
+    senderEmail,
+  })
 );
 
 app.listen(3000, () => {
