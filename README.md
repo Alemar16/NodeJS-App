@@ -1,4 +1,4 @@
-# NodeJS-App
+# <img src="./src/public/image/nodejs.png" alt="Logo" width="50"> [NodeJS-App](https://nodejs-app-nv68.onrender.com/)
 
 Este proyecto se enfoca en una página web Instructiva y didáctica, construida en el entorno de NodeJS utilizando Express.
 
@@ -13,7 +13,7 @@ A continuación detallaré un poco las tecnologias que que usaron en el proyecto
 - **Render:** Como plataforma para hacer el deploy de la pagina y obtener una direccion para compartir
 
 
-Invitamos a los usuarios a explorar los detalles de este proyecto y encontrar una guía paso a paso en [nuestra página de Notion](https://www.notion.so/NodeJS-Proyecto-B-sico-441d7774822848e9bfe618086ec31843?pvs=4) donde describimos la creación de esta página web de NodeJS-App en detalle.
+Invitamos a los usuarios a explorar los detalles de este proyecto y encontrar una guía paso a paso en [nuestra página de Notion](https://www.notion.so/NodeJS-Proyecto-B-sico-441d7774822848e9bfe618086ec31843?pvs=4) donde describimos la creación de esta página web de [NodeJS-App](https://nodejs-app-nv68.onrender.com/) en detalle.
 
 **Estas son algunas imagenes del la aplicacion:**
 <p align="center">
